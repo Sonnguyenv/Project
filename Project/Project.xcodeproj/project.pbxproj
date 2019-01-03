@@ -17,11 +17,11 @@
 		30BC7C3621DC762600DF4E95 /* Row1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C3521DC762600DF4E95 /* Row1.swift */; };
 		30BC7C3A21DCA4BE00DF4E95 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C3921DCA4BE00DF4E95 /* ViewController2.swift */; };
 		30BC7C4021DCB48500DF4E95 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C3F21DCB48500DF4E95 /* Tab.swift */; };
-		30BC7C4621DCBA7A00DF4E95 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C4521DCBA7A00DF4E95 /* ViewController3.swift */; };
 		30BC7C4821DCBD1500DF4E95 /* Row3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C4721DCBD1500DF4E95 /* Row3.swift */; };
 		30BC7C4A21DCC6CD00DF4E95 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C4921DCC6CD00DF4E95 /* CollectionViewCell.swift */; };
 		30BC7C4D21DCD90300DF4E95 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C4C21DCD90300DF4E95 /* ViewController4.swift */; };
 		30BC7C4F21DCD96200DF4E95 /* Row4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C4E21DCD96200DF4E95 /* Row4.swift */; };
+		30D086D921DD9BE900CC1E64 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D086D821DD9BE900CC1E64 /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +58,11 @@
 		30BC7C3521DC762600DF4E95 /* Row1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row1.swift; sourceTree = "<group>"; };
 		30BC7C3921DCA4BE00DF4E95 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		30BC7C3F21DCB48500DF4E95 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		30BC7C4521DCBA7A00DF4E95 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController3.swift; path = ../../../ViewController3.swift; sourceTree = "<group>"; };
 		30BC7C4721DCBD1500DF4E95 /* Row3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Row3.swift; path = Project/Row3.swift; sourceTree = SOURCE_ROOT; };
 		30BC7C4921DCC6CD00DF4E95 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		30BC7C4C21DCD90300DF4E95 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		30BC7C4E21DCD96200DF4E95 /* Row4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row4.swift; sourceTree = "<group>"; };
+		30D086D821DD9BE900CC1E64 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController3.swift; path = Project/ViewController3.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +113,9 @@
 		30BC7C0621DC73D000DF4E95 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				30BC7C4B21DCD8DB00DF4E95 /* Danh Muc */,
-				30BC7C4121DCB92A00DF4E95 /* Them */,
-				30BC7C4221DCB95100DF4E95 /* Trang Chu */,
+				30BC7C4B21DCD8DB00DF4E95 /* Catalog */,
+				30BC7C4121DCB92A00DF4E95 /* Add */,
+				30BC7C4221DCB95100DF4E95 /* Shop */,
 				30BC7C0721DC73D000DF4E95 /* AppDelegate.swift */,
 				30BC7C3921DCA4BE00DF4E95 /* ViewController2.swift */,
 				30BC7C3F21DCB48500DF4E95 /* Tab.swift */,
@@ -145,34 +145,34 @@
 			path = ProjectUITests;
 			sourceTree = "<group>";
 		};
-		30BC7C4121DCB92A00DF4E95 /* Them */ = {
+		30BC7C4121DCB92A00DF4E95 /* Add */ = {
 			isa = PBXGroup;
 			children = (
 				30BC7C0921DC73D000DF4E95 /* ViewController.swift */,
 				30BC7C3521DC762600DF4E95 /* Row1.swift */,
 			);
-			name = Them;
+			name = Add;
 			path = "Thêm";
 			sourceTree = "<group>";
 		};
-		30BC7C4221DCB95100DF4E95 /* Trang Chu */ = {
+		30BC7C4221DCB95100DF4E95 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				30BC7C4521DCBA7A00DF4E95 /* ViewController3.swift */,
+				30D086D821DD9BE900CC1E64 /* ViewController3.swift */,
 				30BC7C4721DCBD1500DF4E95 /* Row3.swift */,
 				30BC7C4921DCC6CD00DF4E95 /* CollectionViewCell.swift */,
 			);
-			name = "Trang Chu";
+			name = Shop;
 			path = "Trang Chủ";
 			sourceTree = "<group>";
 		};
-		30BC7C4B21DCD8DB00DF4E95 /* Danh Muc */ = {
+		30BC7C4B21DCD8DB00DF4E95 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
 				30BC7C4C21DCD90300DF4E95 /* ViewController4.swift */,
 				30BC7C4E21DCD96200DF4E95 /* Row4.swift */,
 			);
-			path = "Danh Muc";
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,11 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D086D921DD9BE900CC1E64 /* ViewController3.swift in Sources */,
 				30BC7C3A21DCA4BE00DF4E95 /* ViewController2.swift in Sources */,
 				30BC7C0A21DC73D000DF4E95 /* ViewController.swift in Sources */,
 				30BC7C4A21DCC6CD00DF4E95 /* CollectionViewCell.swift in Sources */,
 				30BC7C4F21DCD96200DF4E95 /* Row4.swift in Sources */,
-				30BC7C4621DCBA7A00DF4E95 /* ViewController3.swift in Sources */,
 				30BC7C4D21DCD90300DF4E95 /* ViewController4.swift in Sources */,
 				30BC7C3621DC762600DF4E95 /* Row1.swift in Sources */,
 				30BC7C4021DCB48500DF4E95 /* Tab.swift in Sources */,
