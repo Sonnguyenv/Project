@@ -7,9 +7,9 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var imgBackgroud: UIImageView!
     
     @IBOutlet weak var myTable: UITableView!
-    var textShop:[String] = ["Mỹ Phẩm", "Đặc trị nám", "Viên thẩm mỹ", "Tăng cân & giảm cân", "Nghe nhạc", "Xem phim", "Thể thao", "Du lịch", "Ảnh đẹp"]
-    var textMost:[String] = ["Mỹ Phẩm", "Đặc trị nám", "Viên thẩm mỹ", "Tăng cân & giảm cân", "Nghe nhạc", "Xem phim", "Thể thao", "Du lịch", "Ảnh đẹp"]
-    var textOther:[String] = ["Mỹ Phẩm", "Đặc trị nám", "Viên thẩm mỹ", "Tăng cân & giảm cân", "Nghe nhạc", "Xem phim", "Thể thao", "Du lịch", "Ảnh đẹp"]
+    var textShop:[String] = ["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"]
+    var textMost:[String] = ["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"]
+    var textOther:[String] = ["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"]
     var picTureShop:[String] = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
     var picTureMost:[String] = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
     var picTureOther:[String] = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
@@ -20,6 +20,7 @@ class ShopViewController: UIViewController {
         myTable.delegate = self
     }
 }
+
 extension ShopViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

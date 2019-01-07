@@ -11,6 +11,7 @@ class ShopTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,5 +33,11 @@ extension ShopTableViewCell: UICollectionViewDataSource {
         cell.picTure.image = UIImage(named: picTure[indexPath.row])
         cell.textLable.text = textLable[indexPath.row]
         return cell
+    }
+}
+
+extension ShopTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 135, height: collectionView.frame.height )
     }
 }

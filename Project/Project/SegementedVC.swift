@@ -6,7 +6,6 @@ class SegementedVC: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
     
-    
     private lazy var ShopViewController : UIViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "ShopViewController") as! ShopViewController
@@ -25,6 +24,7 @@ class SegementedVC: UIViewController {
         super.viewDidLoad()
         self.updateView()
     }
+    
     static func viewController() -> SegementedVC {
         return UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SegementedVC") as! SegementedVC
     }

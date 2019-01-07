@@ -24,6 +24,4 @@ extension CatalogViewController: UITableViewDataSource {
         cell.picture.image = UIImage(named: arrayPicture[indexPath.row])
         return cell
     }
-    
-    
 }
