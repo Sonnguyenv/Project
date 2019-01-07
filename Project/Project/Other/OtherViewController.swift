@@ -1,8 +1,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class OtherViewController: UIViewController {
+  
     @IBOutlet weak var mytable: UITableView!
     
     var array:[String] = ["Tìm Quanh Đây", "Phòng Trò Chuyện", "Quét Mã QR", "Shop", "Sticker", "Game"]
@@ -15,15 +15,11 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension OtherViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Section" + String(section)
-//    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -40,14 +36,14 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! Row1
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OtherTableViewCell") as! OtherTableViewCell
         cell.lable2.text = array[indexPath.row]
         cell.picture2.image = UIImage(named: array2[indexPath.row])
         return cell
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension OtherViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0
@@ -59,7 +55,7 @@ extension ViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let screen2 = storyBoard.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
+        let screen2 = storyBoard.instantiateViewController(withIdentifier: "SegementedVC") as! SegementedVC
         navigationController?.pushViewController(screen2, animated: true)
     }
 }
