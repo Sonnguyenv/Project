@@ -53,6 +53,12 @@ extension ShopViewController: UITableViewDataSource {
             return "Có thể bạn quan tâm"
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = #colorLiteral(red: 0.862745098, green: 0.9294117647, blue: 1, alpha: 1)
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    }
 }
 
 extension ShopViewController: UITableViewDelegate {

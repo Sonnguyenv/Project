@@ -13,6 +13,9 @@ class OtherViewController: UIViewController {
         mytable.dataSource = self
         mytable.delegate = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = ""
+    }
 }
 
 extension OtherViewController: UITableViewDataSource {
@@ -24,14 +27,14 @@ extension OtherViewController: UITableViewDataSource {
         if section == 0 {
             return 1
         }else if section == 1 {
-            return 6
+            return array.count
         }
         return array.count
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView()
-        header.backgroundColor = #colorLiteral(red: 0.7697247084, green: 0.7969741434, blue: 0.7712874088, alpha: 1)
+        header.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9490196078, blue: 0.9647058824, alpha: 1)
         return header
     }
     
@@ -53,6 +56,7 @@ extension OtherViewController: UITableViewDelegate {
         }
         return 0
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let screen2 = storyBoard.instantiateViewController(withIdentifier: "SegementedVC") as! SegementedVC
