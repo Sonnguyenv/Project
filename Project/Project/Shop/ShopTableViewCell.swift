@@ -5,8 +5,8 @@ class ShopTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var picTure:[String] = []
-    var textLable:[String] = []
+    var imgArray:[String] = []
+    var textArray:[String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +21,7 @@ class ShopTableViewCell: UITableViewCell {
 
 extension ShopTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return picTure.count
+        return imgArray.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -30,8 +30,8 @@ extension ShopTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCollectionViewCell", for: indexPath) as! ShopCollectionViewCell
-        cell.picTure.image = UIImage(named: picTure[indexPath.row])
-        cell.textLable.text = textLable[indexPath.row]
+        cell.picTure.image = UIImage(named: imgArray[indexPath.row])
+        cell.textLable.text = textArray[indexPath.row]
         return cell
     }
 }

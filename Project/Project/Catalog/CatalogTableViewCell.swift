@@ -3,17 +3,17 @@ import UIKit
 
 class CatalogTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var imgCatalog: UIImageView!
     
-    @IBOutlet weak var lable: UILabel!
+    @IBOutlet weak var textCatalog: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        picture.layer.cornerRadius = picture.frame.width / 2
-        picture.clipsToBounds = true
+        imgCatalog.layer.cornerRadius = imgCatalog.frame.width / 2
+        imgCatalog.clipsToBounds = true
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 }

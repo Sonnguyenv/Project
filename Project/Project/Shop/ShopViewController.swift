@@ -6,18 +6,19 @@ class ShopViewController: UIViewController {
 
     @IBOutlet weak var imgBackgroud: UIImageView!
     
-    @IBOutlet weak var myTable: UITableView!
-    var textShop:[String] = ["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"]
-    var textMost:[String] = ["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"]
-    var textOther:[String] = ["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"]
-    var picTureShop:[String] = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
-    var picTureMost:[String] = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
-    var picTureOther:[String] = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
-        
+    @IBOutlet weak var myTableShop: UITableView!
+    
+    let textArrayShop:[[String]] = [["Mỹ phẩm làm đẹp", "Đặc trị nám và tàn nhang", "Viên thẩm mỹ cao cấp", "Tăng cân & giảm cân", "Nghe nhạc thính phòng", "Xem phim hành động", "Thể thao vua", "Địa điểm du lịch", "Ảnh đẹp thiên nhiên"], ["Cờ vua", "Trò chuyện cùng người lạ", "Đặt vé máy bay", "Thuốc đông tây", "Phim hay trong tuần", "Lịch phương đông", "Thế giới động vật", "Tư vấn nhà đất", "Bốc bát họ"], ["Tắm trắng", "Học code cùng nhau", "Các mùa trong năm", "Gia đình số 1", "Iphone", "Vui chơi cùng trẻ", "Shop công nghệ", "Shop làm đẹp", "Tin tức trong nước"]]
+
+    let imgArrayShop:[[String]] = [["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"],["21.jpg", "22.jpg", "23.jpg", "15.jpg", "16.jpg", "20.jpg", "12.jpg", "11.jpg", "19.jpg"],["12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg"]]
+    
+    let titleArrayShop = ["Shop nổi bật", "Most active", "Có thể bạn quan tâm"]
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        myTable.dataSource = self
-        myTable.delegate = self
+        myTableShop.dataSource = self
+        myTableShop.delegate = self
     }
 }
 
@@ -26,32 +27,18 @@ extension ShopViewController: UITableViewDataSource {
         return 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return titleArrayShop.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopTableViewCell") as! ShopTableViewCell
-        if indexPath.section == 0 {
-            cell.picTure = picTureShop
-            cell.textLable = textShop
-        }else if indexPath.section == 1 {
-            cell.picTure = picTureMost
-            cell.textLable = textMost
-        }else {
-            cell.picTure = picTureOther
-            cell.textLable = textOther
-        }
+        cell.textArray = textArrayShop[indexPath.section]
+        cell.imgArray = imgArrayShop[indexPath.section]
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Shop nổi bật"
-        }else if section == 1 {
-            return "Most active"
-        }else {
-            return "Có thể bạn quan tâm"
-        }
+        return titleArrayShop[section]
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

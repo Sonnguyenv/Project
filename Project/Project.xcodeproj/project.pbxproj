@@ -10,8 +10,8 @@
 		3067758521DE1F5000FDB147 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067757F21DE1F5000FDB147 /* ShopTableViewCell.swift */; };
 		3067758621DE1F5000FDB147 /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067758021DE1F5000FDB147 /* ShopCollectionViewCell.swift */; };
 		3067758721DE1F5000FDB147 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067758121DE1F5000FDB147 /* ShopViewController.swift */; };
-		3067758821DE1F5000FDB147 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067758321DE1F5000FDB147 /* OtherViewController.swift */; };
-		3067758921DE1F5000FDB147 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067758421DE1F5000FDB147 /* OtherTableViewCell.swift */; };
+		30958FC021E45697000F5D6D /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30958FBF21E45697000F5D6D /* OtherTableViewCell.swift */; };
+		30958FC221E456A6000F5D6D /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30958FC121E456A6000F5D6D /* OtherViewController.swift */; };
 		30BC7C0821DC73D000DF4E95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC7C0721DC73D000DF4E95 /* AppDelegate.swift */; };
 		30BC7C0D21DC73D000DF4E95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BC7C0B21DC73D000DF4E95 /* Main.storyboard */; };
 		30BC7C0F21DC73D100DF4E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30BC7C0E21DC73D100DF4E95 /* Assets.xcassets */; };
@@ -44,8 +44,8 @@
 		3067757F21DE1F5000FDB147 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		3067758021DE1F5000FDB147 /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		3067758121DE1F5000FDB147 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		3067758321DE1F5000FDB147 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
-		3067758421DE1F5000FDB147 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
+		30958FBF21E45697000F5D6D /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
+		30958FC121E456A6000F5D6D /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		30BC7C0421DC73D000DF4E95 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BC7C0721DC73D000DF4E95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30BC7C0C21DC73D000DF4E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		3067758221DE1F5000FDB147 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				3067758321DE1F5000FDB147 /* OtherViewController.swift */,
-				3067758421DE1F5000FDB147 /* OtherTableViewCell.swift */,
+				30958FC121E456A6000F5D6D /* OtherViewController.swift */,
+				30958FBF21E45697000F5D6D /* OtherTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -301,13 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3067758921DE1F5000FDB147 /* OtherTableViewCell.swift in Sources */,
+				30958FC221E456A6000F5D6D /* OtherViewController.swift in Sources */,
 				3067758621DE1F5000FDB147 /* ShopCollectionViewCell.swift in Sources */,
+				30958FC021E45697000F5D6D /* OtherTableViewCell.swift in Sources */,
 				3067758521DE1F5000FDB147 /* ShopTableViewCell.swift in Sources */,
 				30BC7C3A21DCA4BE00DF4E95 /* SegementedVC.swift in Sources */,
 				30BC7C4F21DCD96200DF4E95 /* CatalogTableViewCell.swift in Sources */,
 				30BC7C4D21DCD90300DF4E95 /* CatalogViewController.swift in Sources */,
-				3067758821DE1F5000FDB147 /* OtherViewController.swift in Sources */,
 				3067758721DE1F5000FDB147 /* ShopViewController.swift in Sources */,
 				30BC7C0821DC73D000DF4E95 /* AppDelegate.swift in Sources */,
 			);

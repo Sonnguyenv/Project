@@ -101,37 +101,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4G-U1-uvI">
-                                <rect key="frame" x="0.0" y="20" width="187.5" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="cyj-Vq-ObZ"/>
-                                </constraints>
-                                <state key="normal" title="Trang Chủ"/>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3j-zg-qMa">
-                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-P4-ejc">
-                                <rect key="frame" x="187.5" y="20" width="187.5" height="49"/>
-                                <state key="normal" title="Danh Mục"/>
-                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-E4-CWk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="N8L-wm-MjT"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Trang chủ"/>
+                                    <segment title="Danh mục"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="UN9-YS-R1g" eventType="valueChanged" id="cLn-hn-ce8"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="54v-KE-mdt" firstAttribute="bottom" secondItem="K3j-zg-qMa" secondAttribute="bottom" id="980-zL-bax"/>
-                            <constraint firstItem="K4G-U1-uvI" firstAttribute="top" secondItem="54v-KE-mdt" secondAttribute="top" id="BC3-2x-Whs"/>
-                            <constraint firstItem="54v-KE-mdt" firstAttribute="trailing" secondItem="aIA-P4-ejc" secondAttribute="trailing" id="JO7-ck-642"/>
-                            <constraint firstItem="aIA-P4-ejc" firstAttribute="width" secondItem="K4G-U1-uvI" secondAttribute="width" id="Lv4-cc-fNp"/>
-                            <constraint firstItem="K4G-U1-uvI" firstAttribute="width" secondItem="WP6-vi-B3H" secondAttribute="width" multiplier="1:2" id="PUZ-XB-rev"/>
-                            <constraint firstItem="K3j-zg-qMa" firstAttribute="leading" secondItem="54v-KE-mdt" secondAttribute="leading" id="ZfI-cU-d1L"/>
-                            <constraint firstItem="K4G-U1-uvI" firstAttribute="leading" secondItem="54v-KE-mdt" secondAttribute="leading" id="cJA-Vu-NZh"/>
-                            <constraint firstItem="K3j-zg-qMa" firstAttribute="top" secondItem="K4G-U1-uvI" secondAttribute="bottom" id="cxK-Ts-cf3"/>
-                            <constraint firstItem="aIA-P4-ejc" firstAttribute="height" secondItem="K4G-U1-uvI" secondAttribute="height" id="hyO-6b-FFf"/>
-                            <constraint firstItem="aIA-P4-ejc" firstAttribute="top" secondItem="54v-KE-mdt" secondAttribute="top" id="n3q-Zn-fwH"/>
-                            <constraint firstItem="54v-KE-mdt" firstAttribute="trailing" secondItem="K3j-zg-qMa" secondAttribute="trailing" id="tMr-52-ce7"/>
+                            <constraint firstItem="1r3-E4-CWk" firstAttribute="top" secondItem="54v-KE-mdt" secondAttribute="top" id="1K6-l2-RP3"/>
+                            <constraint firstItem="K3j-zg-qMa" firstAttribute="top" secondItem="1r3-E4-CWk" secondAttribute="bottom" id="JWX-P5-zTd"/>
+                            <constraint firstItem="K3j-zg-qMa" firstAttribute="trailing" secondItem="54v-KE-mdt" secondAttribute="trailing" id="Q0t-8N-4O1"/>
+                            <constraint firstItem="K3j-zg-qMa" firstAttribute="bottom" secondItem="54v-KE-mdt" secondAttribute="bottom" id="TB3-Cr-oFT"/>
+                            <constraint firstItem="1r3-E4-CWk" firstAttribute="leading" secondItem="54v-KE-mdt" secondAttribute="leading" id="ejY-pa-qPG"/>
+                            <constraint firstItem="K3j-zg-qMa" firstAttribute="leading" secondItem="54v-KE-mdt" secondAttribute="leading" id="m4x-a8-Qjv"/>
+                            <constraint firstItem="1r3-E4-CWk" firstAttribute="trailing" secondItem="54v-KE-mdt" secondAttribute="trailing" id="nPF-nS-q2L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="54v-KE-mdt"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="K3j-zg-qMa" id="FnM-RT-W41"/>
+                        <outlet property="segmentControl" destination="1r3-E4-CWk" id="fa8-hO-q6X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1U-Lr-6cm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5nT-hD-rOx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="5nT-hD-rOx">
                                 <rect key="frame" x="0.0" y="20" width="375" height="152"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="152" id="g2x-bm-YjU"/>
@@ -247,7 +249,7 @@
                     </view>
                     <connections>
                         <outlet property="imgBackgroud" destination="5nT-hD-rOx" id="SKM-xg-zrP"/>
-                        <outlet property="myTable" destination="60s-b9-LmL" id="rdn-E3-OfT"/>
+                        <outlet property="myTableShop" destination="60s-b9-LmL" id="rdn-E3-OfT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8V5-Nq-YA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -326,8 +328,8 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="75" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="lable" destination="8V5-c9-zft" id="O0c-cz-ad9"/>
-                                            <outlet property="picture" destination="lGs-hl-B4S" id="do6-gO-JfI"/>
+                                            <outlet property="imgCatalog" destination="lGs-hl-B4S" id="do6-gO-JfI"/>
+                                            <outlet property="textCatalog" destination="8V5-c9-zft" id="O0c-cz-ad9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -343,7 +345,7 @@
                         <viewLayoutGuide key="safeArea" id="qN3-qU-1Zk"/>
                     </view>
                     <connections>
-                        <outlet property="mytable" destination="GJz-hf-1BG" id="X5k-Dd-ffV"/>
+                        <outlet property="myTableCatalog" destination="GJz-hf-1BG" id="X5k-Dd-ffV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiI-aC-Vpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +354,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="185" height="76"/>
+        <image name="iTunesArtwork" width="512" height="512"/>
         <image name="icon mes" width="120" height="120"/>
     </resources>
 </document>

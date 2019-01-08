@@ -3,25 +3,25 @@ import UIKit
 
 class CatalogViewController: UIViewController {
     
-    @IBOutlet weak var mytable: UITableView!
+    @IBOutlet weak var myTableCatalog: UITableView!
     
-    var arrayText:[String] = ["Quán Ăn", "Mẹ & Bé", "Rạp Chiếu Phim", "Thời Trang / Phụ Kiện", "Thiết Bị Số & Cônng Nghệ", "Mỹ Phẩm / Làm Đẹp", "Khách Sạn", "Giáo Dục", "Sức Khoẻ", "Dịch Vụ Khác"]
-    var arrayPicture:[String] = ["1.ipg", "2.ipg", "3.jpg", "4.jpg","5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"]
+    var textArray:[String] = ["Quán Ăn", "Mẹ & Bé", "Rạp Chiếu Phim", "Thời Trang / Phụ Kiện", "Thiết Bị Số & Cônng Nghệ", "Mỹ Phẩm / Làm Đẹp", "Khách Sạn", "Giáo Dục", "Sức Khoẻ", "Dịch Vụ Khác"]
+    var imgArray:[String] = ["12.ipg", "13.ipg", "14.jpg", "15.jpg","16.jpg", "22.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        mytable.dataSource = self
+        myTableCatalog.dataSource = self
     }
 }
 
 extension CatalogViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayText.count
+        return textArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CatalogTableViewCell") as! CatalogTableViewCell
-        cell.lable.text = arrayText[indexPath.row]
-        cell.picture.image = UIImage(named: arrayPicture[indexPath.row])
+        cell.textCatalog.text = textArray[indexPath.row]
+        cell.imgCatalog.image = UIImage(named: imgArray[indexPath.row])
         return cell
     }
 }
