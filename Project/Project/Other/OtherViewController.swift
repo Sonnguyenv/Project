@@ -13,6 +13,7 @@ class OtherViewController: UIViewController {
         mytable.dataSource = self
         mytable.delegate = self
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = ""
     }
