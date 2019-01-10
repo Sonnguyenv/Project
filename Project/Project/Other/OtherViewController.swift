@@ -60,7 +60,7 @@ extension OtherViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let screen2 = storyBoard.instantiateViewController(withIdentifier: "SegementedVC") as! SegementedVC
+        let screen2 = storyBoard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         navigationController?.pushViewController(screen2, animated: true)
     }
 }
